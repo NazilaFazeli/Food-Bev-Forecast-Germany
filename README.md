@@ -1,3 +1,5 @@
+<img src="Images/cover.png" alt="Cover" width="600"/>
+
 # Food & Beverage Production Forecast – Germany
 
 This repository contains a time series forecasting project focused on the **Industrial Production Index (IPI)** for the **Food and Beverage manufacturing sector** in Germany. Using official Eurostat data from **1991 to 2024**, the project aims to build a reliable predictive model using **SARIMA**, assess its performance, and forecast the next 12 months.
@@ -39,13 +41,13 @@ All analysis and modeling were performed using **Python**.
 - Plotted the original time series: showed a clear upward trend.
 - Performed **KPSS Test** → data was **non-stationary**.
 
-<img src="images/Plotted-Initial.png" alt="Plotted-Initial" width="400"/>
+<img src="Images/Plotted-Initial.png" alt="Plotted-Initial" width="400"/>
 
 ### 3. Data Transformation
 - Applied **first differencing** to remove the trend.
 - KPSS confirmed stationarity after this transformation.
 
-<img src="images/Plotted-First-Differencing.png" alt="Plotted-First-Differencing" width="400"/>
+<img src="Images/Plotted-First-Differencing.png" alt="Plotted-First-Differencing" width="400"/>
 
 ### 4. Train-Test Split
 - The last 12 months of the dataset were held out as a **test set**.
@@ -55,8 +57,8 @@ All analysis and modeling were performed using **Python**.
 - Plotted **ACF** and **PACF** → identified strong seasonal correlation every 60 lags (≈ 5 years).
 - Indicated the presence of seasonality, guiding SARIMA parameter selection.
 
-<img src="images/ACF-PACF-S.png" alt="ACF-PACF-S" width="400"/>
-<img src="images/ACF-PACF-AfterS.png" alt="ACF-PACF-AfterS" width="400"/>
+<img src="Images/ACF-PACF-S.png" alt="ACF-PACF-S" width="400"/>
+<img src="Images/ACF-PACF-AfterS.png" alt="ACF-PACF-AfterS" width="400"/>
 
 ### 6. Model Selection
 - Evaluated 10 SARIMA models with different (p,d,q)(P,D,Q,m) values.
@@ -64,13 +66,13 @@ All analysis and modeling were performed using **Python**.
   - Lowest AIC and BIC values
   - Statistically significant p-values for all coefficients
 
-<img src="images/SARIMAX-Results.png" alt="SARIMAX-Results" width="400"/>
+<img src="Images/SARIMAX-Results.png" alt="SARIMAX-Results" width="400"/>
 
 ### 7. Forecasting
 - Forecasted the next 12 months of production.
 - Plotted predictions with 95% confidence intervals.
 
-<img src="images/Forecasting.png" alt="Forecasting" width="400"/>
+<img src="Images/Forecasting.png" alt="Forecasting" width="400"/>
 
 ### 8. Model Evaluation
 - **MAPE (Mean Absolute Percentage Error)** = **2.9%**
