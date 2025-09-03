@@ -135,4 +135,4 @@ The following Python libraries were used in this project:
 - **scipy** – for statistical testing and metrics  
 - **statsmodels** – for SARIMA modeling and diagnostic tests  
 - **arch** – for performing the KPSS stationarity test  
-- **astsadata** – for loading sample time series datasets (if used)
+- **astsadata** – for loading sample time series datasets
